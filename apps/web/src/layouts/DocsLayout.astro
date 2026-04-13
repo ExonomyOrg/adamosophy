@@ -53,6 +53,10 @@ const base = Astro.site?.pathname || '/adamosophy/';
 </html>
 
 <style>
+  .app-grid {
+    min-height: 100vh;
+  }
+
   .sidebar {
     grid-area: sidebar;
     display: grid;
@@ -90,6 +94,17 @@ const base = Astro.site?.pathname || '/adamosophy/';
     color: var(--color-primary);
     font-weight: 600;
     background-color: var(--color-bg);
+  }
+
+  .main-content {
+    grid-area: main;
+    padding: var(--grid-gap-lg);
+    overflow-y: auto;
+    min-height: 0;
+  }
+
+  .main-content > ::slotted(*) {
+    height: 100%;
   }
 
   @media (max-width: 768px) {
