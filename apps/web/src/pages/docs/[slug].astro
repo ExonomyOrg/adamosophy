@@ -5,18 +5,19 @@ import { getDocs } from '../../lib/docs';
 export async function getStaticPaths() {
   const docs = await getDocs();
   return docs.map((doc) => ({
-    params: { slug: doc.slug },
+    params: { slug: doc.id },
     props: { doc },
   }));
 }
 
 const { doc } = Astro.props;
+const Content = doc.Content;
 ---
 
-<DocsLayout title={`${doc.title} | Adamosophy`}>
+<DocsLayout title={`${doc.data.title} | Adamosophy`}>
   <article class="doc-content">
-    <h1>{doc.title}</h1>
-    <div set:html={doc.content} />
+    <h1>{doc.data.title}</h1>
+    <Content />
   </article>
 </DocsLayout>
 
