@@ -72,10 +72,7 @@ const currentSlug = Astro.url.pathname.split('/').pop() || '';
   }
 
   .sidebar nav a {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: var(--space-sm);
+    display: block;
     padding: var(--space-sm) var(--space-md);
     color: var(--color-text-secondary);
     text-decoration: none;
