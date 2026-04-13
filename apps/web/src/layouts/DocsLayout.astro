@@ -30,8 +30,8 @@ const base = Astro.site?.pathname || '/adamosophy/';
             {docs.map((doc) => (
               <li>
                 <a 
-                  href={`${base}docs/${doc.slug}`} 
-                  class:list={{ active: doc.slug === currentSlug }}
+                  href={`${base}docs/${doc.id}`} 
+                  class:list={{ active: doc.id === currentSlug }}
                 >
                   {doc.data.title}
                 </a>
