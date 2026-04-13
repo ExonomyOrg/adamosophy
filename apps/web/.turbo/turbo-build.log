@@ -1,0 +1,35 @@
+
+> web@0.0.1 build /workspace/apps/web
+> astro build
+
+
+Auto-generating collections for folders in "src/content/" that are not defined as collections.
+This is deprecated, so you should define these collections yourself in "src/content.config.ts".
+The following collections have been auto-generated: docs
+
+05:46:20 [content] Syncing content
+05:46:20 [content] Synced content
+05:46:20 [types] Generated 175ms
+05:46:20 [build] output: "static"
+05:46:20 [build] mode: "static"
+05:46:20 [build] directory: /workspace/apps/web/dist/
+05:46:20 [build] Collecting build info...
+05:46:20 [build] ✓ Completed in 201ms.
+05:46:20 [build] Building static entrypoints...
+05:46:33 [vite] ✓ built in 13.36s
+05:46:33 [build] ✓ Completed in 13.48s.
+
+ building client (vite) 
+05:46:33 [vite] transforming...
+05:46:33 [vite] ✓ 1 modules transformed.
+05:46:34 [vite] rendering chunks...
+05:46:34 [vite] ✓ built in 57ms
+
+ generating static routes 
+05:46:34 ▶ src/pages/docs/[slug].astro
+05:46:34 ▶ src/pages/index.astro
+05:46:34   └─ /index.html (+34ms) 
+05:46:34 ✓ Completed in 94ms.
+
+05:46:34 [build] 1 page(s) built in 13.90s
+05:46:34 [build] Complete!

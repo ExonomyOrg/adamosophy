@@ -1,0 +1,288 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Adamosophy - Social Wisdom Through Technology">
+  <main class="showroom">
+    <section class="hero">
+      <h1>Adamosophy</h1>
+      <p class="tagline">Social wisdom through technology for created humankind</p>
+      <p class="subtitle">A showroom of decentralized applications for autonomous civilization</p>
+      <div class="hero-links">
+        <a href="docs/vision" class="btn btn-secondary">Read Documentation</a>
+      </div>
+    </section>
+
+    <section class="apps-grid">
+      <h2>Applications</h2>
+      <div class="grid">
+        <article class="app-card">
+          <h3>Republet</h3>
+          <p>Autonomous scientific publication platform enabling peer review and dissemination without centralized authorities.</p>
+          <div class="tech-stack">
+            <span class="badge">Willow</span>
+            <span class="badge">Exonomy</span>
+          </div>
+          <a href="republet" class="btn">Explore</a>
+        </article>
+
+        <article class="app-card">
+          <h3>InterNovel</h3>
+          <p>Collaborative creative writing environment where communities co-author narratives in real-time.</p>
+          <div class="tech-stack">
+            <span class="badge">Willow</span>
+            <span class="badge">Exonomy</span>
+          </div>
+          <a href="novel" class="btn">Explore</a>
+        </article>
+
+        <article class="app-card featured">
+          <h3>Exonomy</h3>
+          <p>Self-sovereign economics system for creating and transacting with community vouchers.</p>
+          <div class="tech-stack">
+            <span class="badge">Willow</span>
+            <span class="badge highlight">Voucher Minting</span>
+          </div>
+          <a href="exonomy" class="btn">Explore</a>
+        </article>
+
+        <article class="app-card">
+          <h3>Homo Judaicus</h3>
+          <p>A manifesto for understanding self-organizing human collectives, presented through the InterNovel viewer.</p>
+          <div class="tech-stack">
+            <span class="badge">InterNovel</span>
+            <span class="badge">InViewer</span>
+          </div>
+          <a href="hj" class="btn">Read Manifesto</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="shared-tech">
+      <h2>Shared Technologies</h2>
+      <div class="tech-list">
+        <div class="tech-item">
+          <h3>Willow / Earthstar</h3>
+          <p>Decentralized networking and information sharing layer powering all applications.</p>
+        </div>
+        <div class="tech-item">
+          <h3>Exonomy Vouchers</h3>
+          <p>Self-sovereign economic tokens for value exchange across the ecosystem.</p>
+        </div>
+        <div class="tech-item">
+          <h3>InViewer</h3>
+          <p>PDF-style document viewer for presenting InterNovel creations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="monorepo-info">
+      <h2>Built as a Monorepo</h2>
+      <p>This ecosystem is managed with <strong>Turborepo</strong>, ensuring shared code stays synchronized while each application maintains independence.</p>
+      <ul>
+        <li><strong>packages/willow</strong> - Shared networking layer</li>
+        <li><strong>packages/vouchers</strong> - Voucher verification & spending (minting exclusive to Exonomy)</li>
+        <li><strong>packages/ui</strong> - Shared UI components</li>
+        <li><strong>packages/inviewer</strong> - Document viewer component</li>
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .showroom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+  }
+
+  .apps-grid h2,
+  .shared-tech h2,
+  .monorepo-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .app-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .app-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .app-card.featured {
+    border-color: var(--primary);
+    background: linear-gradient(135deg, var(--card-bg), rgba(var(--primary-rgb), 0.05));
+  }
+
+  .app-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+  }
+
+  .app-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .tech-stack {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .badge {
+    background: var(--badge-bg);
+    color: var(--badge-text);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  .badge.highlight {
+    background: var(--primary);
+    color: white;
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+
+  .btn:hover {
+    background: var(--primary-dark);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    margin-left: 1rem;
+  }
+
+  .btn-secondary:hover {
+    background: var(--primary);
+    color: white;
+  }
+
+  .hero-links {
+    margin-top: 2rem;
+  }
+
+  .tech-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .tech-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+
+  .tech-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+  }
+
+  .tech-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .monorepo-info {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+  }
+
+  .monorepo-info ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .monorepo-info li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .monorepo-info li:last-child {
+    border-bottom: none;
+  }
+
+  .monorepo-info strong {
+    color: var(--primary);
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

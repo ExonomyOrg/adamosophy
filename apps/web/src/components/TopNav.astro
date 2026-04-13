@@ -1,0 +1,109 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title = 'Adamosophy' } = Astro.props;
+---
+
+<header class="top-nav">
+  <div class="nav-container">
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    
+    <a href="" class="logo">
+      <span class="logo-text">{title}</span>
+    </a>
+    
+    <nav class="nav-links">
+      <a href="" class="nav-link">Home</a>
+      <a href="docs/vision" class="nav-link">Docs</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  menuToggle?.addEventListener('click', () => {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar?.classList.toggle('open');
+  });
+</script>
+
+<style>
+  .top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 200;
+  }
+
+  .nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    gap: 1rem;
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: #424242;
+  }
+
+  .menu-toggle:hover {
+    color: #00838F;
+  }
+
+  @media (max-width: 1023px) {
+    .menu-toggle {
+      display: block;
+    }
+  }
+
+  .logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00838F;
+  }
+
+  .logo-text {
+    background: linear-gradient(135deg, #00838F, #00ACC1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .nav-links {
+    margin-left: auto;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    color: #424242;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover {
+    color: #00838F;
+  }
+</style>

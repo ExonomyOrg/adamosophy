@@ -1,0 +1,22 @@
+{
+  "name": "adamosophy",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Applications for Humanity - A showroom of applications designed for humanity.",
+  "packageManager": "pnpm@9.15.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "preview": "turbo run preview"
+  },
+  "devDependencies": {
+    "astro": "5.4.2",
+    "turbo": "^2.0.0",
+    "vite": "6.4.2"
+  }
+}

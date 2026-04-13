@@ -1,0 +1,179 @@
+---
+import DocsLayout from '../layouts/DocsLayout.astro';
+import DocsSidebar from '../components/DocsSidebar.astro';
+
+const docs = [
+  { id: 'vision', title: 'Vision', path: '/docs/vision' }
+];
+---
+
+<DocsLayout title="Home">
+  <div class="app-container">
+    <DocsSidebar docs={docs} />
+    
+    <main class="main-content">
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      
+      <div class="hero">
+        <h1>Welcome to Adamosophy</h1>
+        <p class="tagline">Applications for Humanity</p>
+        <p class="description">
+          A showroom of applications designed for humanity. Explore our vision 
+          and documentation for building tools that serve human needs.
+        </p>
+        <a href="/docs/vision" class="cta-button">Read Our Vision →</a>
+      </div>
+
+      <section class="features">
+        <h2>What is Adamosophy?</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>🌍 For Humanity</h3>
+            <p>Applications built with the sole purpose of serving human needs and improving lives.</p>
+          </div>
+          <div class="feature-card">
+            <h3>📚 Open Documentation</h3>
+            <p>Transparent, accessible documentation for all our projects and initiatives.</p>
+          </div>
+          <div class="feature-card">
+            <h3>🔧 Monorepo Architecture</h3>
+            <p>A unified repository containing child repos for each application.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    const closeBtn = document.querySelector('.close-btn');
+
+    menuToggle?.addEventListener('click', () => {
+      sidebar?.classList.add('open');
+    });
+
+    closeBtn?.addEventListener('click', () => {
+      sidebar?.classList.remove('open');
+    });
+  </script>
+</DocsLayout>
+
+<style>
+  .app-container {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .main-content {
+    flex: 1;
+    margin-left: 0;
+    padding: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .main-content {
+      margin-left: 280px;
+    }
+  }
+
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 999;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    .menu-toggle {
+      display: none;
+    }
+  }
+
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-bottom: 1.5rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: #3498db;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+
+  .cta-button:hover {
+    background: #2980b9;
+  }
+
+  .features {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+  }
+
+  .features h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  .feature-card h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card p {
+    color: #666;
+    line-height: 1.6;
+  }
+</style>

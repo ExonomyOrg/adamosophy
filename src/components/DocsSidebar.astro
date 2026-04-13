@@ -1,0 +1,118 @@
+---
+interface Doc {
+  id: string;
+  title: string;
+  path: string;
+}
+
+interface Props {
+  docs: Doc[];
+  currentDoc?: string;
+}
+
+const { docs, currentDoc } = Astro.props;
+---
+
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="logo">Adamosophy</a>
+    <button class="close-btn" aria-label="Close sidebar">&times;</button>
+  </div>
+  <nav class="docs-nav">
+    <ul>
+      {docs.map((doc) => (
+        <li>
+          <a 
+            href={`/docs/${doc.id}`} 
+            class:list={['doc-link', doc.id === currentDoc && 'active']}
+          >
+            {doc.title}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</aside>
+
+<style>
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 280px;
+    background: #fff;
+    border-right: 1px solid #e0e0e0;
+    padding: 1.5rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  @media (min-width: 768px) {
+    .sidebar {
+      transform: translateX(0);
+    }
+  }
+
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    text-decoration: none;
+  }
+
+  .close-btn {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+  }
+
+  @media (min-width: 768px) {
+    .close-btn {
+      display: none;
+    }
+  }
+
+  .docs-nav ul {
+    list-style: none;
+  }
+
+  .docs-nav li {
+    margin-bottom: 0.5rem;
+  }
+
+  .doc-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #555;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+
+  .doc-link:hover {
+    background: #f0f0f0;
+    color: #2c3e50;
+  }
+
+  .doc-link.active {
+    background: #3498db;
+    color: #fff;
+  }
+</style>
