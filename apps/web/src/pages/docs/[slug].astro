@@ -3,7 +3,7 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
 import { getDocs } from '../../lib/docs';
 
 export async function getStaticPaths() {
-  const docs = getDocs();
+  const docs = await getDocs();
   return docs.map((doc) => ({
     params: { slug: doc.slug },
     props: { doc },
