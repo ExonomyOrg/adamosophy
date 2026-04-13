@@ -28,7 +28,7 @@ const currentSlug = Astro.url.pathname.split('/').pop() || '';
             {docs.map((doc) => (
               <li>
                 <a 
-                  href={`docs/${doc.slug}`} 
+                  href={`/adamosophy/docs/${doc.slug}`} 
                   class:list={{ active: doc.slug === currentSlug }}
                 >
                   {doc.title}
