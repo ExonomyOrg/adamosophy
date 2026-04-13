@@ -2,204 +2,187 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Adamosophy - Social Wisdom Through Technology">
-  <div class="main-content-inner">
-    <section class="hero">
-      <h1>Adamosophy</h1>
-      <p class="tagline">Social wisdom through technology for created humankind</p>
-      <p class="subtitle">A showroom of decentralized applications for autonomous civilization</p>
-      <div class="hero-links">
-        <a href="/adamosophy/docs/vision" class="btn btn-secondary">Read Documentation</a>
+<Layout title="Adamosophy - Decentralized Apps for Humanity">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <h1 class="hero-title">Decentralized Apps for Humanity</h1>
+      <p class="hero-subtitle">
+        A curated showroom of sovereign applications designed to empower individuals, 
+        foster community, and restore digital autonomy.
+      </p>
+      <div class="hero-cta">
+        <a href="#featured" class="btn btn-primary">Explore the Ecosystem</a>
+        <a href="/adamosophy/docs/vision" class="btn btn-secondary">Read Our Vision</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="apps-grid">
-      <h2>Applications</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3 class="card-title">Republet</h3>
-          <p class="card-description">Autonomous scientific publication platform enabling peer review and dissemination without centralized authorities.</p>
-          <div class="tech-stack">
-            <span class="badge">Willow</span>
-            <span class="badge">Exonomy</span>
-          </div>
-          <div class="card-action">
-            <a href="/adamosophy/republet" class="btn">Explore</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3 class="card-title">InterNovel</h3>
-          <p class="card-description">Collaborative creative writing environment where communities co-author narratives in real-time.</p>
-          <div class="tech-stack">
-            <span class="badge">Willow</span>
-            <span class="badge">Exonomy</span>
-          </div>
-          <div class="card-action">
-            <a href="/adamosophy/novel" class="btn">Explore</a>
-          </div>
-        </article>
-
-        <article class="card featured">
-          <h3 class="card-title">Exonomy</h3>
-          <p class="card-description">Self-sovereign economics system for creating and transacting with community vouchers.</p>
-          <div class="tech-stack">
-            <span class="badge">Willow</span>
-            <span class="badge highlight">Voucher Minting</span>
-          </div>
-          <div class="card-action">
-            <a href="/adamosophy/exonomy" class="btn">Explore</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3 class="card-title">Homo Judaicus</h3>
-          <p class="card-description">A manifesto for understanding self-organizing human collectives, presented through the InterNovel viewer.</p>
-          <div class="tech-stack">
-            <span class="badge">InterNovel</span>
-            <span class="badge">InViewer</span>
-          </div>
-          <div class="card-action">
-            <a href="/adamosophy/hj" class="btn">Read Manifesto</a>
-          </div>
-        </article>
+  <!-- Mission Section -->
+  <section class="mission-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Mission</h2>
+        <p>Building a future where technology serves human flourishing</p>
       </div>
-    </section>
-
-    <section class="shared-tech">
-      <h2>Shared Technologies</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3 class="card-title">Willow / Earthstar</h3>
-          <p class="card-description">Decentralized networking and information sharing layer powering all applications.</p>
+      <div class="mission-grid">
+        <div class="mission-card">
+          <div class="mission-icon">🛡️</div>
+          <h3>Sovereignty</h3>
+          <p>Tools that return control of data, identity, and assets to individuals.</p>
         </div>
-        <div class="card">
-          <h3 class="card-title">Exonomy Vouchers</h3>
-          <p class="card-description">Self-sovereign economic tokens for value exchange across the ecosystem.</p>
+        <div class="mission-card">
+          <div class="mission-icon">🔗</div>
+          <h3>Interoperability</h3>
+          <p>Systems designed to work together, breaking down silos and fostering connection.</p>
         </div>
-        <div class="card">
-          <h3 class="card-title">InViewer</h3>
-          <p class="card-description">PDF-style document viewer for presenting InterNovel creations.</p>
+        <div class="mission-card">
+          <div class="mission-icon">🤝</div>
+          <h3>Community</h3>
+          <p>Platforms that prioritize human relationships over extraction and engagement metrics.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="monorepo-info card">
-      <h2 class="card-title">Built as a Monorepo</h2>
-      <p class="card-description">This ecosystem is managed with <strong>Turborepo</strong>, ensuring shared code stays synchronized while each application maintains independence.</p>
-      <ul class="tech-list">
-        <li><strong>packages/willow</strong> - Shared networking layer</li>
-        <li><strong>packages/vouchers</strong> - Voucher verification & spending (minting exclusive to Exonomy)</li>
-        <li><strong>packages/ui</strong> - Shared UI components</li>
-        <li><strong>packages/inviewer</strong> - Document viewer component</li>
-      </ul>
-    </section>
-  </div>
+  <!-- Featured Projects Section -->
+  <section id="featured" class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>Explore our growing ecosystem of decentralized applications</p>
+      </div>
+      <div class="features-grid">
+        <!-- Republet -->
+        <article class="feature-card">
+          <div class="card-header">
+            <span class="card-icon">📰</span>
+            <h3>Republet</h3>
+          </div>
+          <p class="card-description">
+            A decentralized publishing platform empowering writers and readers with true ownership 
+            of content and curation.
+          </p>
+          <a href="/adamosophy/republet" class="card-link">Learn More →</a>
+        </article>
+
+        <!-- InterNovel -->
+        <article class="feature-card">
+          <div class="card-header">
+            <span class="card-icon">📖</span>
+            <h3>InterNovel</h3>
+          </div>
+          <p class="card-description">
+            Collaborative storytelling reimagined. Create, share, and evolve narratives together 
+            in a decentralized literary universe.
+          </p>
+          <a href="/adamosophy/novel" class="card-link">Learn More →</a>
+        </article>
+
+        <!-- Exonomy -->
+        <article class="feature-card">
+          <div class="card-header">
+            <span class="card-icon">💹</span>
+            <h3>Exonomy</h3>
+          </div>
+          <p class="card-description">
+            An economic system explorer visualizing alternative models of exchange, value, 
+            and resource allocation beyond traditional capitalism.
+          </p>
+          <a href="/adamosophy/exonomy" class="card-link">Learn More →</a>
+        </article>
+
+        <!-- Homo Judaicus -->
+        <article class="feature-card">
+          <div class="card-header">
+            <span class="card-icon">🕎</span>
+            <h3>Homo Judaicus</h3>
+          </div>
+          <p class="card-description">
+            A digital space for exploring Jewish heritage, identity, and thought in the 
+            modern decentralized age.
+          </p>
+          <a href="/adamosophy/hj" class="card-link">Learn More →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="steps-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>How It Works</h2>
+        <p>Join the movement in three simple steps</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <h3>Explore</h3>
+          <p>Browse our curated collection of decentralized applications.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <h3>Engage</h3>
+          <p>Try out apps that resonate with your values and needs.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <h3>Contribute</h3>
+          <p>Join communities, provide feedback, or build your own app.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container cta-content">
+      <h2>Ready to Reclaim Your Digital Sovereignty?</h2>
+      <p>Start exploring the future of decentralized applications today.</p>
+      <a href="#featured" class="btn btn-primary btn-large">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>Adamosophy</h3>
+        <p>Showcasing decentralized applications for humanity.</p>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="/adamosophy/republet">Republet</a></li>
+          <li><a href="/adamosophy/novel">InterNovel</a></li>
+          <li><a href="/adamosophy/exonomy">Exonomy</a></li>
+          <li><a href="/adamosophy/hj">Homo Judaicus</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/adamosophy/docs/vision">Vision Document</a></li>
+          <li><a href="https://github.com/thalperi/adamosophy" target="_blank">GitHub</a></li>
+          <li><a href="/adamosophy/docs">Documentation</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Discord</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Adamosophy. Built for humanity.</p>
+    </div>
+  </footer>
 </Layout>
-
-<style>
-  .main-content-inner {
-    display: grid;
-    gap: var(--grid-gap-lg);
-  }
-
-  .hero {
-    text-align: center;
-    padding: var(--space-2xl) 0;
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: var(--space-sm);
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary, #00ACC1));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .tagline {
-    font-size: 1.25rem;
-    color: var(--color-text-secondary);
-    margin-bottom: var(--space-sm);
-  }
-
-  .subtitle {
-    font-size: 1rem;
-    color: var(--color-text-muted, #9E9E9E);
-  }
-
-  .apps-grid h2,
-  .shared-tech h2,
-  .monorepo-info h2 {
-    font-size: 1.5rem;
-    margin-bottom: var(--space-md);
-  }
-
-  .tech-stack {
-    display: flex;
-    gap: var(--space-sm);
-    flex-wrap: wrap;
-    margin-top: var(--space-md);
-  }
-
-  .badge {
-    background: var(--color-bg-secondary);
-    color: var(--color-text-secondary);
-    padding: var(--space-xs) var(--space-sm);
-    border-radius: 999px;
-    font-size: 0.75rem;
-    font-weight: 500;
-  }
-
-  .badge.highlight {
-    background: var(--color-primary);
-    color: white;
-  }
-
-  .btn-secondary {
-    background: transparent;
-    border: 2px solid var(--color-primary);
-    color: var(--color-primary);
-    margin-left: var(--space-md);
-  }
-
-  .btn-secondary:hover {
-    background: var(--color-primary);
-    color: white;
-  }
-
-  .hero-links {
-    margin-top: var(--space-lg);
-  }
-
-  .monorepo-info ul {
-    list-style: none;
-    padding: 0;
-    margin-top: var(--space-md);
-  }
-
-  .monorepo-info li {
-    padding: var(--space-sm) 0;
-    color: var(--color-text-secondary);
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .monorepo-info li:last-child {
-    border-bottom: none;
-  }
-
-  .monorepo-info strong {
-    color: var(--color-primary);
-  }
-
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 2rem;
-    }
-
-    .tagline {
-      font-size: 1.1rem;
-    }
-  }
-</style>
