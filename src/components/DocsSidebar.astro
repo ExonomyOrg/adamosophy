@@ -11,11 +11,12 @@ interface Props {
 }
 
 const { docs, currentDoc } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 
 <aside class="sidebar">
   <div class="sidebar-header">
-    <a href="/" class="logo">Adamosophy</a>
+    <a href={base} class="logo">Adamosophy</a>
     <button class="close-btn" aria-label="Close sidebar">&times;</button>
   </div>
   <nav class="docs-nav">
@@ -23,7 +24,7 @@ const { docs, currentDoc } = Astro.props;
       {docs.map((doc) => (
         <li>
           <a 
-            href={`/docs/${doc.id}`} 
+            href={`${import.meta.env.BASE_URL}docs/${doc.id}`} 
             class:list={['doc-link', doc.id === currentDoc && 'active']}
           >
             {doc.title}
