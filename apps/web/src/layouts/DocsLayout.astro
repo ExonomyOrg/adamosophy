@@ -5,6 +5,7 @@ import '../styles/global.css';
 
 const docs = await getDocs();
 const currentSlug = Astro.url.pathname.split('/').pop() || '';
+const base = Astro.site?.pathname || '/adamosophy/';
 ---
 
 <!doctype html>
@@ -29,7 +30,7 @@ const currentSlug = Astro.url.pathname.split('/').pop() || '';
             {docs.map((doc) => (
               <li>
                 <a 
-                  href={`/docs/${doc.slug}`} 
+                  href={`${base}docs/${doc.slug}`} 
                   class:list={{ active: doc.slug === currentSlug }}
                 >
                   {doc.data.title}

@@ -11,7 +11,7 @@ interface Props {
 }
 
 const { docs, currentDoc } = Astro.props;
-const base = import.meta.env.BASE_URL;
+const base = Astro.site?.pathname || '/adamosophy/';
 ---
 
 <aside class="sidebar">
@@ -24,7 +24,7 @@ const base = import.meta.env.BASE_URL;
       {docs.map((doc) => (
         <li>
           <a 
-            href={`${import.meta.env.BASE_URL}docs/${doc.id}`} 
+            href={`${base}docs/${doc.id}`} 
             class:list={['doc-link', doc.id === currentDoc && 'active']}
           >
             {doc.title}
