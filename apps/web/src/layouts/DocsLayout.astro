@@ -2,7 +2,6 @@
 import TopNav from '../components/TopNav.astro';
 import { getDocs } from '../lib/docs';
 
-const { title = 'Adamosophy' } = Astro.props;
 const docs = await getDocs();
 const currentSlug = Astro.url.pathname.split('/').pop() || '';
 ---
@@ -13,13 +12,13 @@ const currentSlug = Astro.url.pathname.split('/').pop() || '';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Social wisdom through technology for created humankind" />
-    <title>{title}</title>
+    <title>Adamosophy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <TopNav title={title} />
+    <TopNav />
 
     <div class="layout">
       <aside class="sidebar">
