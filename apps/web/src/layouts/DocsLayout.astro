@@ -24,14 +24,15 @@ const currentSlug = Astro.url.pathname.split('/').pop() || '';
       
       <aside class="sidebar">
         <nav>
+          <h3>Documentation</h3>
           <ul>
             {docs.map((doc) => (
               <li>
                 <a 
-                  href={`/adamosophy/docs/${doc.slug}`} 
+                  href={`/docs/${doc.slug}`} 
                   class:list={{ active: doc.slug === currentSlug }}
                 >
-                  {doc.title}
+                  {doc.data.title}
                 </a>
               </li>
             ))}
