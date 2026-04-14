@@ -1,37 +1,62 @@
 ```
-# Documentation builds and temporary files
-*.tmp
-*.log
+# Build artifacts
+dist/
+build/
+*.o
+*.obj
+*.out
 
-# Environment files
+# Dependencies
+node_modules/
+.pnpm-store/
+.yarn/
+.npm/
+
+# Environment
 .env
 .env.local
 .env.*
 
-# Dependencies and build artifacts
-node_modules/
-dist/
-build/
-target/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+# Cache directories
+.cache/
+.node_cache/
+.nyc_output/
+coverage/
+htmlcov/
+.nyc-output/
 
-# Editor/IDE files
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# System files
-.DS_Store
-Thumbs.db
-
-# Coverage reports
-coverage/
-htmlcov/
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
 .coverage
+
+# JavaScript/Node specific
+.next/
+.nuxt/
+.vuepress/dist
+.svelte-kit/
+.output/
+.vercel/
+.netlify/
 
 # Compressed files
 *.zip

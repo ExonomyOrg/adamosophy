@@ -1,6 +1,7 @@
 ---
 import DocsLayout from '../../layouts/DocsLayout.astro';
 import { getDocs } from '../../lib/docs';
+import MarkdownRenderer from '../../components/MarkdownRenderer';
 
 export async function getStaticPaths() {
   const docs = await getDocs();
@@ -11,13 +12,15 @@ export async function getStaticPaths() {
 }
 
 const { doc } = Astro.props;
-const { Content } = await doc.render();
+// Access the raw markdown body from the content collection entry
+const rawMarkdown = doc.body;
 ---
 
 <DocsLayout title={`${doc.data.title} | Adamosophy`}>
   <article class="doc-content">
     <h1>{doc.data.title}</h1>
-    <Content />
+    <!-- Use modular Markdown renderer with default strategy (marked) -->
+    <MarkdownRenderer client:load content={rawMarkdown} strategy="marked" />
   </article>
 </DocsLayout>
 
