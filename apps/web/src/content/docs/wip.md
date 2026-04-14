@@ -23,11 +23,26 @@ This document tracks the current state of development for the Adamosophy documen
 - [ ] Implement GitHub integration for actual file updates
 - [ ] Add image upload and optimization logic
 - [ ] Fix MD viewer nested list indentation (all list items appear left-aligned instead of hierarchically indented)
+- [ ] Implement 3 Markdown rendering options with user preference setting
+  - [ ] Option 1: marked + github-markdown-css
+  - [ ] Option 2: remark / rehype ecosystem solution
+  - [ ] Option 3: @tailwindcss/typography with prose class
+  - [ ] Add tristate toggle in drawer for renderer selection
+  - [ ] Integrate with user settings profile section
 
 ### 2026-01-14: MD Viewer Indentation Issue
 **Problem**: Nested lists in markdown documents aren't showing proper hierarchical indentation. All list items (bulleted or numbered) inside documents appear completely left-aligned instead of being indented according to their nesting level.
 **Root Cause**: CSS applies the same padding to all list levels rather than incrementally increasing indentation for each nesting level.
 **Status**: Pending fix to CSS for nested list styling.
+
+### 2026-01-14: Multiple Markdown Rendering Options
+**Requirement**: Adamosophy will provide 3 optional ways to render Markdown content, allowing users to select their preferred method in the User Settings section of their profile.
+**Implementation Plan**:
+1. **marked + github-markdown-css**: Fast parsing with authentic GitHub-style appearance
+2. **remark / rehype ecosystem**: Advanced processing with Astro integration and plugin extensibility
+3. **@tailwindcss/typography**: Beautiful default styles with perfect Tailwind integration
+**UI**: Initial implementation will use a tristate toggle in the drawer for quick switching between methods.
+**Status**: Documented in settings.md, ready for implementation.
 
 ## Roadmap
 

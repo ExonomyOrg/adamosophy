@@ -23,7 +23,14 @@ description: 'Operational constraints, GitHub interaction protocols, and a log o
 
 ## 2. GitHub Interaction Protocols
 
+*   **Repository URL**: https://github.com/ExonomyOrg/adamosophy
 *   **Authentication**: Use the provided `GITHUB_TOKEN` environment variable to access the repository.
+    *   The token is stored in the environment variable `GITHUB_TOKEN`
+    *   Token format: GitHub Personal Access Token (PAT) with `repo` scope
+    *   Usage: Configure git to use the token for HTTPS authentication:
+        ```bash
+        git remote set-url origin https://${GITHUB_TOKEN}@github.com/ExonomyOrg/adamosophy.git
+        ```
 *   **Branch Strategy**: Commit and push directly to the `main` branch. **Do not create new branches** unless explicitly instructed.
 *   **Build Verification**: After pushing a commit that triggers a build:
     1.  **Wait** for the GitHub Actions build to complete.
