@@ -31,8 +31,8 @@ const base = Astro.site?.pathname?.replace(/\/$/, '') || '';
             {docs.map((doc) => (
               <li>
                 <a 
-                  href={`${base}docs/${doc.id}`} 
-                  class:list={{ active: doc.id === currentSlug }}
+                  href={`${base}/docs/${doc.id.replace('.md', '')}`} 
+                  class:list={{ active: doc.id.replace('.md', '') === currentSlug }}
                 >
                   {doc.data.title}
                 </a>
