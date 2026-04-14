@@ -1,3 +1,10 @@
+---
+title: User Interface Architecture
+description: UI design system and component architecture inspired by Couchers.org
+layout: ../../layouts/DocLayout.astro
+order: 1
+---
+
 # User Interface Architecture
 
 ## Overview
