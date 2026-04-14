@@ -16,9 +16,12 @@ This document tracks the current state of development for the Adamosophy documen
 - [x] Implement drag-and-drop reordering UI (frontend)
 - [x] Add accordion metadata editor UI (frontend)
 - [x] Create API endpoints for updates (backend stubs)
+- [x] Fix build errors in API routes (esbuild parsing issues with `import type`)
+- [x] Implement resizable sidebar with drag handle (default 30% wider at 21rem)
+- [x] Add Card/List toggle view on Docs landing page
+- [x] Create UI architecture documentation (ui.md) inspired by Couchers.org
 - [ ] Implement GitHub integration for actual file updates
 - [ ] Add image upload and optimization logic
-- [ ] Implement Card/List toggle view on landing page
 
 ## Roadmap
 
@@ -46,11 +49,20 @@ The following features are currently being implemented to enhance the documentat
 - **Unified Components**: All cards and list items will use a single shared component (`DocCard.astro`) to ensure identical styling across the sidebar, landing page, and any other listings.
 - **CSS Grid**: The document list in the drawer and the landing page will utilize CSS Grid for responsive, consistent layout.
 
+### 5. Resizable Sidebar
+- **Default Width**: Increased from 16rem to 21rem (30% wider) for better readability
+- **Resize Handle**: Appears on hover at the right edge of the sidebar with blue highlight
+- **Drag-to-Resize**: Users can drag the handle to adjust sidebar width between 200px-600px
+- **Persistence**: Sidebar width is saved to localStorage and restored on page load
+- **Visual Feedback**: Cursor changes to `ew-resize` when hovering over the handle
+
 ## Notes
 
 - **No CMS Yet**: These features provide a lightweight editing interface directly in the sidebar, delaying the need for a full Headless CMS until the documentation volume increases.
 - **GitHub Integration**: Changes made via the UI (reordering, metadata edits) will commit directly to the `main` branch using the provided PAT, triggering automatic rebuilds.
+- **UI Architecture**: Documentation system design is inspired by Couchers.org's clean, component-driven approach with emphasis on usability and accessibility.
+- **Build Fixes**: Resolved esbuild parsing errors in API routes by removing frontmatter delimiters and changing `import type` to `import` statements.
 
 ---
 
-*Last Updated: Immediately prior to implementation of interactive sidebar features.*
+*Last Updated: Session including resizable sidebar, card/list toggle, UI documentation, and build fixes.*
