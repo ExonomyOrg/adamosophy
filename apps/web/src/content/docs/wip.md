@@ -82,25 +82,6 @@ Tasks being worked on in the current session:
   - [ ] Add tristate toggle in drawer for renderer selection
   - [ ] Integrate with user settings profile section
 
-- [x] Implement Dark Mode theme system
-  - Started: 2026-01-14
-  - Completed: 2026-01-14
-  - Reference: ui.md (color specs), settings.md (theme selection requirement)
-  - Create theme context/store for Light/Dark/System preference
-  - Apply dark mode color palette from ui.md (#313539 bg, #3d4347 surface, etc.)
-  - Add system preference detection via prefers-color-scheme
-  - Implement manual override toggle in UI
-  - Ensure optimal readability adjustments across all components
-  - Test all pages and components in both themes
-  - Build verified: SUCCESS
-
-- [ ] Fix Dark Mode and Layout issues
-  - Started: 2026-01-14
-  - Dark mode background too light (needs darker shade, not pitch black)
-  - Scrolling: footer should remain in view, only document content scrolls
-  - Tweak component should align to bottom of sidebar drawer
-  - Remove duplicate document title (appearing above doc container)
-
 ---
 
 ## Notes & Context
@@ -112,6 +93,7 @@ Reference information for active tasks:
 - **Markdown Rendering**: Three optional rendering methods with user preference stored in settings
 - **Build Verification**: All commits must pass GitHub Actions build before task completion confirmation
 - **Project Management**: Non-current work is tracked in GitHub Projects (cold storage): https://github.com/users/thalperi/projects/2
+- **Dark Mode Implementation**: Completed 2026-01-14 - tristate toggle (Light/Dark/System), document theme synchronization, layout fixes (scrolling, footer visibility, duplicate title removal)
 
 ---
 
