@@ -18,21 +18,17 @@ This document tracks **actively ongoing** development work for the Adamosophy do
 Remove content from this document when ANY of these conditions are met:
 
 1. **Completed & Verified**: Task is done, build passed, and user confirmed acceptance
-   - Move historical details to a separate `changelog.md` or archive if needed for reference
+   - Move to GitHub Projects board (adamosophy) under "Done" column
    - Do NOT keep completed checkboxes here as a work log
 
 2. **Abandoned or Deprioritized**: Work was started but stopped without completion
-   - If it might resume soon (within 1-2 sessions), move to a "Paused" section with date paused
-   - If unlikely to resume, remove entirely and document reasoning in `decisions.md`
+   - Move to GitHub Projects board (adamosophy) under "Backlog" or "Cancelled" column
+   - Document reasoning in `decisions.md` if significant architectural decision
 
 3. **Superseded**: Approach was changed or solution was replaced
    - Document the final approach in relevant technical docs (`ui.md`, `settings.md`, etc.)
+   - Move old approach notes to GitHub Projects if reference needed
    - Remove the abandoned approach from this document
-
-4. **Older Than 3 Sessions**: Any item without updates for 3+ working sessions
-   - Review during session start: Is this still active?
-   - If yes, add fresh timestamp and continue
-   - If no, apply criteria 1-3 above
 
 ### Learning Capture Protocol
 
@@ -43,6 +39,16 @@ If you struggled with something and learned important lessons:
   - `agent.md` for operational lessons
   - Inline code comments for implementation specifics
 - Then remove the entire episode from `wip.md`
+
+### GitHub Projects Integration
+
+**Cold Storage Protocol**: All non-current activity moves to GitHub Projects:
+- **Finished work**: Move to "Done" column after verification
+- **Pending/Backlog items**: Move to "Backlog" column
+- **Paused items**: Move to "Paused" column with context notes
+- **Active work only stays here**: Only tasks being worked on *right now* remain in wip.md
+
+GitHub Project Board: https://github.com/users/thalperi/projects/2
 
 **Remember**: `wip.md` is a current status dashboard, NOT a project diary, changelog, or work log.
 
@@ -80,27 +86,6 @@ Tasks being worked on in the current session:
 
 ---
 
-## Recently Completed (Pending Removal)
-
-**These items should be moved to changelog and removed within 1-2 sessions:**
-
-- [x] Fix MD viewer nested list indentation
-  - Completed: 2026-04-14
-  - Implementation: marked + github-markdown-css modular renderer
-  - Build: Run #91 passed
-  
-*(Note: Once changelog.md exists, move this there and delete from wip.md)*
-
----
-
-## Paused Items
-
-**Items temporarily on hold with intent to resume:**
-
-*None currently*
-
----
-
 ## Notes & Context
 
 Reference information for active tasks:
@@ -109,8 +94,10 @@ Reference information for active tasks:
 - **Image Handling**: Smart resizing and WebP conversion for performance optimization
 - **Markdown Rendering**: Three optional rendering methods with user preference stored in settings
 - **Build Verification**: All commits must pass GitHub Actions build before task completion confirmation
+- **Project Management**: Non-current work is tracked in GitHub Projects (cold storage): https://github.com/users/thalperi/projects/2
 
 ---
 
 *Last Updated: 2026-01-14*
 *Next Review: Beginning of next session - apply stale information criteria*
+

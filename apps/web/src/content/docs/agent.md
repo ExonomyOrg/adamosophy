@@ -85,7 +85,29 @@ description: 'Brief description of the document content'
 
 **Validation Rule:** Before committing any new `.md` file, verify it contains this frontmatter block. Missing frontmatter = Build Failure.
 
-## 5. The `incoming/` Folder - Unavailable to Agent
+## 5. Project Management with GitHub Projects
+
+**Cold Storage Protocol**: All non-current work is tracked in GitHub Projects, not in documentation files.
+
+*   **GitHub Projects Board**: https://github.com/users/thalperi/projects/2 (Project name: "adamosophy")
+*   **Purpose**: Centralized tracking for finished, pending, and paused work items
+*   **Columns**:
+    *   **Done**: Completed and verified tasks (moved here after build passes)
+    *   **Backlog**: Pending or deprioritized items awaiting future work
+    *   **Paused**: Temporarily halted items with intent to resume
+    *   **Cancelled**: Abandoned work with reasoning documented in `decisions.md`
+*   **wip.md Relationship**: Only **actively ongoing** tasks remain in `wip.md`. Everything else moves to GitHub Projects as "cold storage"
+*   **Automated Management**: No automated task management rules (e.g., "older than 3 sessions"). Human judgment determines when to move items
+
+**Workflow**:
+1. When a task is completed and build verified → Move to GitHub Projects "Done" column
+2. When a task is deprioritized → Move to "Backlog" or "Cancelled" column
+3. When a task is paused → Move to "Paused" column with context notes
+4. Document significant decisions in `decisions.md`, not in wip.md
+
+---
+
+## 6. The `incoming/` Folder - Unavailable to Agent
 
 **CRITICAL: The `incoming/` folder is OFF LIMITS and unavailable to the agent while working on adamosophy.**
 
