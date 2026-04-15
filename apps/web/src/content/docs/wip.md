@@ -30,6 +30,8 @@ Remove content from this document when ANY of these conditions are met:
    - Move old approach notes to GitHub Projects if reference needed
    - Remove the abandoned approach from this document
 
+**No Automated Rules**: There are NO automated task management rules (e.g., "older than 3 sessions"). Human judgment determines when to move items to cold storage.
+
 ### Learning Capture Protocol
 
 If you struggled with something and learned important lessons:
@@ -48,7 +50,7 @@ If you struggled with something and learned important lessons:
 - **Paused items**: Move to "Paused" column with context notes
 - **Active work only stays here**: Only tasks being worked on *right now* remain in wip.md
 
-GitHub Project Board: https://github.com/users/thalperi/projects/2
+**Project Board**: "adamosophy" - https://github.com/users/thalperi/projects/2
 
 **Remember**: `wip.md` is a current status dashboard, NOT a project diary, changelog, or work log.
 
