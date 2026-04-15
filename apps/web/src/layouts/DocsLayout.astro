@@ -40,12 +40,22 @@ const currentSlug = pathSegments[pathSegments.length - 1] || '';
 <style>
   .app-grid {
     min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+    grid-template-columns: var(--sidebar-width) 1fr;
+    grid-template-rows: var(--header-height) 1fr auto;
+    gap: 0;
+    height: 100vh;
+    overflow: hidden;
   }
 
   .sidebar {
     grid-area: sidebar;
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto 1fr auto;
     gap: var(--grid-gap);
     padding: var(--grid-gap-lg);
     background-color: var(--color-bg-secondary);

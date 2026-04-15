@@ -94,6 +94,13 @@ Tasks being worked on in the current session:
   - Test all pages and components in both themes
   - Build verified: SUCCESS
 
+- [ ] Fix Dark Mode and Layout issues
+  - Started: 2026-01-14
+  - Dark mode background too light (needs darker shade, not pitch black)
+  - Scrolling: footer should remain in view, only document content scrolls
+  - Tweak component should align to bottom of sidebar drawer
+  - Remove duplicate document title (appearing above doc container)
+
 ---
 
 ## Notes & Context

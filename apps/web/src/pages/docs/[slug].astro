@@ -18,7 +18,6 @@ const rawMarkdown = doc.body;
 
 <DocsLayout title={`${doc.data.title} | Adamosophy`}>
   <article class="doc-content">
-    <h1>{doc.data.title}</h1>
     <!-- Use modular Markdown renderer with default strategy (marked) -->
     <MarkdownRenderer client:load content={rawMarkdown} strategy="marked" />
   </article>
