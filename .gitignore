@@ -1,78 +1,72 @@
-```gitignore
+```markdown
 # Dependencies
 node_modules/
+venv/
+.venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+target/
+.gradle/
 
-# Build outputs
+# Build artifacts
 dist/
 build/
-*.css.map
+*.pyc
+*.class
+*.o
+*.exe
+*.dll
+*.so
+*.a
+*.obj
+*.out
 
-# Cache directories
-.cache/
-.node_cache/
-
-# Environment variables
-.env
-.env.local
-.env.*
-
-# Logs
-*.log
-
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# Editor files
+# Editor/IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
 *.tmp
 
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-venv/
-.venv/
-.venv3/
-.env/
-.envs/
-.pytest_cache/
-.coverage
-htmlcov/
-.mypy_cache/
-.hypothesis/
+# Logs
+*.log
 
-# Node.js
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Compiled assets
-*.min.js
-*.min.css
-
-# Coverage reports
+# Coverage
 coverage/
-*.gcov
-*.lcov
+htmlcov/
+.coverage
 
-# Distribution / packaging
-*.tar.gz
+# Environment
+.env
+.env.local
+*.env.*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Compressed files
 *.zip
-*.deb
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
 *.rpm
-
-# Testing
-.junit-cache/
-.nyc_output/
-
-# IDE
-*.swp
-*.swo
-*~
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
 ```
