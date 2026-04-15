@@ -66,6 +66,28 @@
   --color-info: #2196f3;
 }
 
+/* Light Mode Color Palette (explicit override) */
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f5f5f5;
+  --color-bg-tertiary: #e0e0e0;
+  --color-text: #212121;
+  --color-text-secondary: rgba(33, 33, 33, 0.7);
+  --color-text-tertiary: rgba(33, 33, 33, 0.5);
+  --color-border: rgba(0, 0, 0, 0.12);
+  --color-primary: #6bc4a6;
+  --color-primary-light: #8fd4ba;
+  --color-primary-dark: #00a398;
+  --color-secondary: #fe982a;
+  --color-secondary-light: #ffad52;
+  --color-secondary-dark: #e47701;
+  --color-success: #4caf50;
+  --color-success-dark: #388e3c;
+  --color-warning: #ff9800;
+  --color-error: #f44336;
+  --color-info: #2196f3;
+}
+
 /* Dark Mode overrides for markdown-body (github-markdown-css) */
 [data-theme="dark"] .markdown-body {
   color-scheme: dark;
@@ -114,6 +136,56 @@
   --color-accent-emphasis: #1f6feb;
   --color-attention-subtle: rgba(187,128,9,0.15);
   --color-danger-fg: #f85149;
+}
+
+/* Light Mode overrides for markdown-body (github-markdown-css) - explicit when system is dark */
+[data-theme="light"] .markdown-body {
+  color-scheme: light;
+}
+
+[data-theme="light"] .markdown-body {
+  --color-fg-default: #24292f;
+  --color-fg-muted: #57606a;
+  --color-fg-subtle: #6e7781;
+  --color-canvas-default: #ffffff;
+  --color-canvas-subtle: #f6f8fa;
+  --color-border-default: #d0d7de;
+  --color-border-muted: #d8dee4;
+  --color-neutral-muted: rgba(175,184,193,0.2);
+  --color-accent-fg: #0969da;
+  --color-accent-emphasis: #0969da;
+  --color-attention-subtle: #fff8c5;
+  --color-danger-fg: #cf222e;
+  --color-prettylights-syntax-comment: #6e7781;
+  --color-prettylights-syntax-constant: #0550ae;
+  --color-prettylights-syntax-entity: #8250df;
+  --color-prettylights-syntax-storage-modifier-import: #24292f;
+  --color-prettylights-syntax-entity-tag: #116329;
+  --color-prettylights-syntax-keyword: #cf222e;
+  --color-prettylights-syntax-string: #0a3069;
+  --color-prettylights-syntax-variable: #953800;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+  --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+  --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+  --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+  --color-prettylights-syntax-carriage-return-bg: #cf222e;
+  --color-prettylights-syntax-string-regexp: #116329;
+  --color-prettylights-syntax-markup-list: #953800;
+  --color-prettylights-syntax-markup-heading: #0550ae;
+  --color-prettylights-syntax-markup-italic: #24292f;
+  --color-prettylights-syntax-markup-bold: #24292f;
+  --color-prettylights-syntax-markup-deleted-text: #82071e;
+  --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+  --color-prettylights-syntax-markup-inserted-text: #116329;
+  --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+  --color-prettylights-syntax-markup-changed-text: #953800;
+  --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+  --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+  --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+  --color-prettylights-syntax-meta-diff-range: #8250df;
+  --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+  --color-prettylights-syntax-constant-other-reference-link: #0a3069;
 }
 
 /* Reset & Base */
