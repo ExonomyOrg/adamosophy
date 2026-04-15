@@ -1,6 +1,6 @@
 ---
 title: User Interface Architecture
-description: UI design system and component architecture inspired by Couchers.org
+description: UI design system and component architecture following Couchers.org design patterns
 order: 1
 ---
 
@@ -8,7 +8,43 @@ order: 1
 
 ## Overview
 
-This document defines the user interface architecture for Adamosophy, drawing inspiration from modern platform design patterns including Couchers.org's component-driven approach and Google Docs' document management interface.
+This document defines the user interface architecture for Adamosophy. **We closely follow the Couchers.org UI design patterns** as our primary reference implementation. All authentication flows, user management interfaces, and component structures should imitate the Couchers.org approach while adapting to our Astro-based stack and decentralized identity requirements.
+
+### Current Implementation Focus: Decentralized Auth UI
+
+Our immediate priority is implementing the Decentralized Auth landing page and user management interfaces based on Couchers.org's proven patterns:
+
+1. **Settings Page Structure** - Modular sections with clear typography hierarchy (H2 titles, body text explanations)
+2. **LoginCard Component** - Session display showing location, last activity time, expiry date, browser/device info, with logout actions
+3. **LoginsPage Layout** - Centered container (50% width on desktop), infinite scroll support, "Logout of All Sessions" button
+4. **Section Component** - Reusable section wrapper for organizing settings into titled blocks
+5. **Alert Component** - Error/success message handling with MUI Alert base
+6. **Button Patterns** - Loading states, secondary color for destructive actions, async mutation handling
+
+Key Couchers.org files analyzed:
+- `app/web/features/auth/Settings.tsx` - Main settings page with modular sections
+- `app/web/features/auth/logins/LoginsPage.tsx` - Active sessions management
+- `app/web/features/auth/logins/LoginCard.tsx` - Individual session card with metadata
+- `app/web/features/auth/section/Section.tsx` - Section layout component
+- `app/web/components/Alert.tsx` - Error handling component
+
+## Couchers.org Design Reference
+
+Our implementation is based on analyzing the Couchers.org codebase (`Couchers-org/couchers` GitHub repository), specifically:
+
+- **Authentication Flow**: Login pages, session management, password reset flows
+- **User Settings**: Account settings page structure with modular sections
+- **Component Library**: Material-UI based components with consistent styling
+- **Layout Patterns**: Sidebar navigation, responsive design, card-based layouts
+
+### Key UI Components to Imitate
+
+1. **LoginCard.tsx** - Session display with location, time, and logout actions
+2. **LoginsPage.tsx** - Active sessions management with infinite scroll
+3. **Settings.tsx** - Modular settings page with sectioned layout
+4. **Section.tsx** - Reusable section component for settings organization
+5. **Alert.tsx** - Error and success message handling
+6. **Button.tsx** - Loading states, async click handling, variant support
 
 ## Design Principles
 
