@@ -7,6 +7,8 @@ description: 'Operational constraints, GitHub interaction protocols, and a log o
 
 ## 1. Core Operational Constraints
 
+*   **Main Branch Only**: **ALWAYS** ensure you are working on the `main` branch before doing any work on the project. Verify with `git branch` or `git status` before any file modification, commit, or push. **Never create or use any other branches** unless explicitly instructed by the user. If not on `main`, switch to it immediately with `git checkout main`.
+*   **Documentation Location**: All active project documentation is located at `/workspace/apps/web/src/content/docs/`. This is the **ONLY** directory where documentation files should be read from or written to during normal operations. Never waste time searching for documentation files elsewhere; if a document is needed, it must be in this location. The `incoming/` folder is OFF LIMITS (see Section 9).
 *   **No Unauthorized Coding**: Do not code or modify anything without **explicit instruction** and **permission** from the user.
 *   **Verification First**: Before acting, always verify the current state of the workspace (file existence, content, build status). Never assume prior steps were completed correctly due to potential context loss.
 *   **Documentation Review**: Always review `wip.md` and other project definition documents before starting work to understand the current project state.
