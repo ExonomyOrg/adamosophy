@@ -39,6 +39,8 @@ description: 'Operational constraints, GitHub interaction protocols, and a log o
     2.  **Active Polling Loop Protocol**:
         *   Initiate the check immediately after push.
         *   Enter a loop: Sleep for **5 seconds**, then check the build status via API.
+        *   **Efficient API Query**: Use `gh api` with `--jq` filtering to retrieve ONLY the status and conclusion fields. Do NOT use verbose `curl` commands that return unnecessary data.
+            *   Command: `gh api repos/ExonomyOrg/adamosophy/actions/runs?head_sha=$(git rev-parse HEAD) --jq '.workflow_runs[0] | {status: .status, conclusion: .conclusion}'`
         *   Repeat this cycle a **maximum of 6 times** (Total wait time: ~30 seconds).
         *   **If Success/Failure is found:** Report the result immediately and proceed to the next step.
         *   **If No Result after 6 attempts:** Stop looping. Report to the user: "Build status pending after 30 seconds. Please check GitHub Actions manually." Gracefully end the verification task there; do not leave the task in a "waiting" limbo state.
