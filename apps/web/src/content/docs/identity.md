@@ -1,3 +1,9 @@
+---
+title: Identity & Authentication System
+description: did:peer-based decentralized identity with trusted delegate recovery
+order: 10
+---
+
 # Identity & Authentication System
 
 ## Overview
